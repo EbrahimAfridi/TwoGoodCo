@@ -1,0 +1,332 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+*::selection{
+    color: whitesmoke;
+    background-color: black;
+}
+
+body, html{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    background-color: #F7F7F7;
+}
+
+.icon:hover{
+    transform: rotate(20deg);
+}
+
+.icon{
+    transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
+
+nav{
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 25px;
+    font-family: helvetica;
+}
+
+.nav-logo {
+    height: 83px;
+    overflow: hidden;
+}
+
+.nav-logo svg{
+    display: block;
+}
+
+.nav-right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.links {
+    padding: 10px;
+}
+
+.nav-right .links a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    font-size: 14px;
+    margin: 0 20px;
+}
+
+.icons {
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #F7F7F7;
+}
+
+.nav-right .icons i{
+    font-size: 18px;
+    margin: 0 20px;
+    font-weight: 100;
+}
+
+.cursor{
+    height: 150px;
+    width: 150px;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    background-color: #b4baf6;
+    position: fixed;
+}
+
+.page1{
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+    padding: 0 1vw;
+    padding-top: 20vh;
+    margin-top: 70px;
+}
+
+.page1 h1{
+    /*text-align: center;*/
+    letter-spacing: -8px;
+    font-size: 15.8vw;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: futura;
+    line-height: 14vw;
+}
+
+.video-container{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    margin-top: 1vw;
+}
+
+.play{
+    position: fixed;
+    background-color: black;
+    color: #fff;
+    font-size: 1.3vw;
+    font-family: futura;
+    padding: 2.6vw 1.7vw;
+    text-transform: uppercase;
+    border-radius: 50%;
+    opacity: 0;
+    scale: 0;
+}
+
+.video-container video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.page2{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3vw 1vw;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.page2 .elem{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 31%;
+    overflow: hidden;
+}
+
+.page2 .elem img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    scale: 1.3;
+}
+
+.page2 .elem .dets{
+    position: absolute;
+    background-color: palegoldenrod;
+    height: 8vh;
+    width: 90%;
+    border-radius: 50px;
+    /*transform: translate(-50%, -50%);*/
+    z-index: 9;
+}
+
+.page3{
+    min-height: 120vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+
+.page3 .child {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*height: 54vh;*/
+    /*width: 38vw;*/
+}
+
+.page3 .child img{
+    height: 100%;
+}
+
+/*Responsive Design*/
+
+@media (max-width: 600px){
+
+    nav {
+        width: 100%;
+        position: fixed;
+        z-index: 99;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 15px;
+    }
+
+    nav .nav-right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .links {
+        padding: 10px;
+        display: none;
+    }
+
+    .nav-logo {
+        height: 67px;
+        overflow: hidden;
+    }
+
+    .nav-logo svg {
+        display: block;
+        height: 67px;
+        width: 80px;
+    }
+    nav #twogoodlogo{
+        height: 40px;
+        margin-left: -20px;
+    }
+
+    .nav-right .icons {
+        padding: 7px;
+        border-radius: 50px;
+        background-color: #F7F7F7;
+    }
+
+    .nav-right .icons i {
+        font-size: 15px;
+        margin: 0 20px;
+        font-weight: 100;
+    }
+
+
+    .page1{
+        min-height: 70vh;
+        width: 100%;
+        padding: 0 3vw;
+        padding-top: 25vh;
+    }
+
+    .page1 h1{
+        letter-spacing: -3px;
+    }
+
+    .video-container{
+        height: 25vh;
+        margin-top: 3vw;
+    }
+
+    .video-container .play{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 4vw;
+        padding: 9.5vw 7.2vw;
+        opacity: 1;
+        scale: 1;
+    }
+
+    .page2{
+        min-height: 100vh;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 3vw 1vw;
+        justify-content: space-between;
+    }
+
+    .page2 .elem{
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 3vw;
+    }
+
+    .page2 .elem .dets{
+        position: absolute;
+        background-color: rgb(229, 156, 186);
+        height: 60px;
+        width: 70%;
+        border-radius: 50px;
+        z-index: 9;
+    }
+
+    .page3 {
+        min-height: 120vh;
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .child {
+        object-fit: cover;
+        height: 30vh;
+        width: 45vw;
+        position: relative;
+        padding: 10.5vw;
+        overflow: hidden;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: center;
+
+    }
+
+    .child img {
+        height: 100%;
+    }
+
+}
